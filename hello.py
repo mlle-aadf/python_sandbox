@@ -1,4 +1,4 @@
-### this is a comment
+# this is a comment
 """
 these lines
 are also
@@ -27,6 +27,7 @@ name=input("What's your name? ")
 
 # + concatenates
 # print("Hello, " + name)
+# print("hi"*3)
 
 # f"{variable}"
 # print(f"Hello, {name}")
