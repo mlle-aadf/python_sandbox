@@ -1,4 +1,4 @@
-[Python 3.13.1 documentation](https://docs.python.org/3/) \
+[Python 3.13.1 documentation](https://docs.python.org/3/)
 
 Harvard CS50’s Introduction to Programming with Python | 
 [Notes](https://cs50.harvard.edu/python/2022/) | 
