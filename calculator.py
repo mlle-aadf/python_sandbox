@@ -19,6 +19,7 @@ print(z)
 
 # *** format print(z) output, f-strings
 # https://www.geeksforgeeks.org/formatted-string-literals-f-strings-python/
-
+variable = z
+print(f"Variable: {variable}")
 print(f"{z:,}")
 print(f"{z:.3f}") # "print 3 digits of float"

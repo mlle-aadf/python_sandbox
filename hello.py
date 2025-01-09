@@ -1,9 +1,9 @@
+# multi-line str
+"""
+much lines
+such wow
+"""
 # this is a comment
-"""
-these lines
-are also
-comments
-"""
 
 ### FUNCTIONS
 # print("Hello World")
@@ -29,7 +29,7 @@ name=input("What's your name? ")
 # print("Hello, " + name)
 # print("hi"*3)
 
-# f"{variable}"
+# F-STRINGS >>> f"{variable}"
 # print(f"Hello, {name}")
 
 
@@ -37,7 +37,7 @@ name=input("What's your name? ")
 
 # .strip() removes whitespace
 stripped=name.strip()
-# print(f"Hello, {stripped}")
+print(f"Hello, {stripped}")
 
 # .capitalize() Capitalization string method
 capital=name.capitalize()
