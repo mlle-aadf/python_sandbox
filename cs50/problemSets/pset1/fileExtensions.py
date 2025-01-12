@@ -6,8 +6,30 @@
 
 # Be sure to handle different file extensions and their corresponding media types.
 
-# ["cat.jpg"] should output: image/jpeg
-# ["document.pdf"] should output: application/pdf
-# ["song.mp3"] should output: audio/mpeg
-# ["video.mp4"] should output: video/mp4
-# ["unknownfile.xyz"] should output: application/octet-stream
+def main():
+    while True:
+        file = input("Enter the name of a file: ")
+        if not input_validity(file):
+            print("Invalid file name.")
+        else:
+            print(extension(file))
+            break
+
+def input_validity(file):
+    if "." not in file or file.startswith(".") or file.endswith("."):
+        return False
+    return True
+
+def extension(file):
+    file_ext = file.rsplit(".", 1)[-1]
+    media_types = {
+        "jpg": "image/jpeg",
+        "pdf": "application/pdf",
+        "mp3": "audio/mpeg",
+        "mp4": "video/mp4"
+    }
+
+    return media_types.get(file_ext, "application/octet-stream")
+
+if __name__ == "__main__":
+    main()
