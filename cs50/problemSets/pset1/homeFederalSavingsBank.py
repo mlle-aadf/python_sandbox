@@ -9,8 +9,30 @@
 # Be sure to vary the casing of your input and “accidentally” add spaces on either side of your input before pressing enter. 
 # Your program should behave as expected, case- and space-insensitively.
 
-# ["hello"] should output: $0
-# ["Hello"] should output: $0
-# ["hi"] should output: $20
-# ["hey"] should output: $20
-# ["what's up"] should output: $100
+def main():
+    while True:
+        greeting = input("What is your greeting? ").strip().lower()
+        if greeting.isdigit() or greeting == "":
+            print("Invalid greeting.")
+        else:
+            print(hello(greeting))
+            break
+
+    test_cases()
+
+def test_cases():
+    test_cases = ["hello", "Hello", "hi", "hey", "what's up", "Hola"]
+    for case in test_cases:
+        print(f"Testing: {case}")
+        print(f"Output: {hello(case)}")
+
+def hello(greeting):
+    if greeting == "hello":
+        return "$0"
+    elif greeting.startswith("h"):
+        return "$20"
+    else:
+        return "$100"
+
+if __name__ == "__main__":
+    main()
