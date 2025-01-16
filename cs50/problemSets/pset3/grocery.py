@@ -14,3 +14,14 @@
 # 2 APPLE
 # 1 BANANA
 # 1 CARROT
+
+# def main():
+#     while True:
+    
+        # prompt user for input
+            # if input ctrl+D, 
+                # print items_list
+            # else
+                # if input in items_list 
+                    # increment item counter
+                # else add item to items_list
