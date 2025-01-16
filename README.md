@@ -1,5 +1,3 @@
-# Python Sandbox
-
 ## Description
 A personal playground repo for Python learning and practice.
 
