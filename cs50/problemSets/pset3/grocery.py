@@ -15,13 +15,24 @@
 # 1 BANANA
 # 1 CARROT
 
-# def main():
-#     while True:
-    
-        # prompt user for input
-            # if input ctrl+D, 
-                # print items_list
-            # else
-                # if input in items_list 
-                    # increment item counter
-                # else add item to items_list
+def main():
+    grocery_list ={}
+    while True:
+        try:
+            # prompt user for input
+            item = input("- ")
+
+            if item == "..":
+                raise Exception("EOF Error")
+            elif item in grocery_list:
+                grocery_list[item] += 1
+            else:
+                grocery_list[item] = 1
+        # if input ctrl+D, 
+        except Exception:
+            # print items_list
+            for item in grocery_list:
+                print(f"{grocery_list[item]} {item.upper()}")
+            break
+
+main()
