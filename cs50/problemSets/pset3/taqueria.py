@@ -29,3 +29,10 @@
 #
 # Input: Super Quesadilla
 # Output: $20.00
+
+def main():
+    while True:
+        try:
+            order = input("What can I get for you?")
+            
+main()

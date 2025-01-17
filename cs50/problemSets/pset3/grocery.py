@@ -20,18 +20,19 @@ def main():
     while True:
         try:
             # prompt user for input
-            item = input("- ")
+            item = input("- ").lower()
 
             if item == "..":
                 raise Exception("EOF Error")
             elif item in grocery_list:
                 grocery_list[item] += 1
             else:
-                grocery_list[item] = 1
+                grocery_list[item.lower()] = 1
         # if input ctrl+D, 
         except Exception:
             # print items_list
-            for item in grocery_list:
+            print(f"list: {grocery_list}")
+            for item in sorted(grocery_list.keys()):
                 print(f"{grocery_list[item]} {item.upper()}")
             break
 
