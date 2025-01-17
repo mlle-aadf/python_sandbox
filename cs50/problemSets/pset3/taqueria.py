@@ -31,8 +31,29 @@
 # Output: $20.00
 
 def main():
+    menu = {
+        "Baja Taco": 4.25,
+        "Burrito": 7.50,
+        "Bowl": 8.50,
+        "Nachos": 11.00,
+        "Quesadilla": 8.50,
+        "Super Burrito": 8.50,
+        "Super Quesadilla": 9.50,
+        "Taco": 3.00,
+        "Tortilla Salad": 8.00
+    }
+    
+    total = 0
+    
     while True:
         try:
-            order = input("What can I get for you?")
-            
+            order = input("What can I get for you? ")
+            if order == "..":
+                raise Exception
+            elif order.title() in menu:
+                total += menu[order.title()]
+                print(f"Total: ${total:.2f}")
+        except:
+            print(f"Final total: ${total:.2f}")
+            break
 main()
