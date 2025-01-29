@@ -31,7 +31,7 @@ def main():
         # if program exit, 
         except Exception:
             # print items_list
-            print(f"list: {grocery_list}")
+            # print(f"list: {grocery_list}")
             for item in sorted(grocery_list.keys()):
                 print(f"{grocery_list[item]} {item.upper()}")
             break
