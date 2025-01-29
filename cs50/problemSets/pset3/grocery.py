@@ -22,13 +22,13 @@ def main():
             # prompt user for input
             item = input("- ").lower()
 
-            if item == "..":
+            if item == "..": # workaround for 'ctrl+d' to exit
                 raise Exception("EOF Error")
             elif item in grocery_list:
                 grocery_list[item] += 1
             else:
                 grocery_list[item.lower()] = 1
-        # if input ctrl+D, 
+        # if program exit, 
         except Exception:
             # print items_list
             print(f"list: {grocery_list}")
