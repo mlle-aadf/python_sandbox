@@ -7,7 +7,7 @@ def main():
         response = requests.get(
             "https://api.artic.edu/api/v1/artworks/search",
             {"q":artist}
-            )
+        )
         
         response.raise_for_status()
     except requests.HTTPError:
