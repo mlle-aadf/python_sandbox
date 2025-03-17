@@ -12,7 +12,45 @@
 #     Adieu, adieu, to Liesl, Friedrich, Louisa, Kurt, Brigitta, Marta, and Gretl
 
 def main():
-    pass
+    names = []
+    
+    
+    while True:
+        try:
+            name = input("name: ").capitalize()
+            
+            if name == "..":
+                raise Exception("EOF Error")
+            else:
+                names.append(name)
+        
+        except Exception:
+            print("byE: ")
+            print(bidAdieu(names))
+
+def bidAdieu(names):
+    
+    adieu = ""
+    # adieu = f"Adieu, adieu, to {names}"
+    print(f"adieu: {adieu}")
+    print(f"names: {names}")
+    print(f"join: {", ".join(names[0:len(names)-1])}")
+    print(f"last: {names[-1]}")
+    
+    # i = 0
+    
+    # if len(names) < 2:
+    #     adieu = f"Adieu, adieu, to {names[0]}"
+    # elif len(names) == 2:
+    #     adieu = f"Adieu, adieu, to {names[0]} and {names[1]}"
+    #     # adieu += names[0]+" and "+names[1]
+    # else:
+    #     while i < len(names)-1:
+    #         adieu = f"Adieu, adieu, to "
+    #     # for name in range(0, len(names)-1):
+    #     #     adieu += (name+", ")
+    #     # adieu += (" and "+name)
+    # return adieu
 
 if __name__ == "__main__":
     main()
